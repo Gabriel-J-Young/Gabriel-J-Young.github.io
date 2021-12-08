@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Cascadia;
+  src: url(Cascadia\ Mono\ PL\ SemiLight\ 350.otf);
+}
+
+div {
+	font-family: Cascadia;
+}
+
+
+body {
+  background-color: white;
+}
+
+h1 {
+  color: Black;
+  margin-left: 20px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
