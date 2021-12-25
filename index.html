@@ -1,110 +1,165 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>Gabriel Young's Orbiting Islands</title>
-         <link rel="stylesheet" type="text/css" href="gabe_style.css">
+      <title>Gabriel Young's Portfolio</title>
+      <link rel="stylesheet" type="text/css" href="gabe_style.css">
+      <script src="personal-website-script.js"></script>
    </head>
    <body>
+      <a id="top"></a>
        <div>
-         <ul class=nav>
+         <!--<ul class=nav>
             <li class=nav ><a class=nav href="https://gabrieljyoung.com">Personal Website</a></li>
             <li class=nav><a class=nav href="https://github.com/Gabriel-J-Young">GitHub</a></li>
         </ul>
-           <div class=body-div>
-               <h1 class="flex-container line-break">
-              Gabriel Young's Orbiting Islands
-           </h1>
-
-           <div class=flex-body-box>
+      -->
+         <h1 class="flex-container line-break">
+            Gabriel Young's Portfolio
+         </h1>
+         <div class=flex-body-box>
             <p>
-            For my final project, I created two floating islands, and asteroid in blender, and put them together in a kinematics model to orbit each other. My initial idea was to model something like the three-body problem, with three bodies of roughly equal mass exerting orbital forces on each other. Due to time constraints, it proved impractical to find an initial stable configuration to model. Therefore, I decided to model a more traditional orbital system with one body having a dominant amount of mass. In this project that body is the largest island.
-           </p>
-           <p>
-            For this project I made sure to implement technically challenging features but making a visually appealing and cohesive scene was very important to me, hence the decision to create most of the models.
-           </p>
-           <img class=responsive-image src="summary.gif" alt="overview gif">
-           <p>
-              I implemented: 
-           </p>
-           <ul class=body>
-              <li class=body> 
-               Collision detection
-              </li>
-              <li class=body> 
-               Orbital Kinematics model
-              </li>
-              <li class=body> 
-               Animated particle system
-              </li>
-              <li class=body> 
-               Blinn-Phong lighting
-              </li>
-              <li class=body> 
-               Texture mapping
-              </li>
-           </ul>
-           </div>
+               Hi, I'm Gabriel, a Computer Science student from Cal Poly SLO.
+            </p>
+         </div>
+         
 
-           <div class=flex-body-box>
-            <h2 class=body>Collision detection</h2>
-            <p class=body>
-              Collisions are implemented as perfectly elastic, using vector math. A collision occurs when the distance between two bodies is less than or equal to the sum of their radii. When a collision occurs, the vector normal of collision is computed. Then the dot product of the difference in velocities and the vector normal of collision is computed to get the relative velocity of the bodies along the vector normal of collision. This relative velocity is subtracted and added to the velocities of the bodies, and then mass weighting is applied. 
+         <h2>Projects:</h2>
+
+        <div class=dropdown>
+           <button onclick="myFunction()" class="dropdownbtn">Orbiting Islands</button>
+           <div id="myDropdown" class="dropdown-content">
+            <div class=body-div>
+            <h1 class="flex-container">
+               Orbiting Islands<br>
+            </h1>
+
+            <div class=flex-body-box>
+               <p>
+                  This Project was made for CSC 471 at Cal Poly in fall quarter 2021.
+               </p>
+               <p>
+               For my final project, I created two floating islands, and asteroid in blender, and put them together in a kinematics model to orbit each other. My initial idea was to model something like the three-body problem, with three bodies of roughly equal mass exerting orbital forces on each other. Due to time constraints, it proved impractical to find an initial stable configuration to model. Therefore, I decided to model a more traditional orbital system with one body having a dominant amount of mass. In this project that body is the largest island.
             </p>
-            <img class=responsive-image src="collision.gif" alt="collision gif">
-            <p class=caption>
-              After the collision, the asteroid follows a curved path because of gravitational force
+            <p>
+               For this project I made sure to implement technically challenging features but making a visually appealing and cohesive scene was very important to me, hence the decision to create most of the models.
             </p>
-           </div>
-           <div class=flex-body-box>
-            <h2 class=body>Orbital Kinematics model</h2>
-            <p class=body>
-               Each body has a radius, mass, position, velocity, and acceleration. These, along with the gravitational constant, are initially set manually to create a stable system. When the model runs, the acceleration is computed according to Cowell’s method (for Orbit Modeling) and velocity and position are set accordingly. This was implemented such that all the bodies exert gravitational force on each other. In practice however, the motions of the bodies are mostly determined by the largest island as it had the largest mass by far.
+            <img class=responsive-image src="summary.gif" alt="overview gif">
+            <p>
+               I implemented: 
             </p>
-            <img class=math src="cowells.svg" alt="cowells formula">
-            <p class=caption>
-              Cowell's method
-            </p>
-           </div>
-           <div class=flex-body-box>
-            <h2 class=body>Animated particle system</h2>
-            <p class=body>
-               The snow falling from the cloud onto the large island is what constitutes the particle system. Particles are spawned randomly within a disk in the cloud itself and accelerate downward for a given time. The particle positions are also updated according to the position of the large island itself.
-            </p>
-            <img class=responsive-image src="snow.gif" alt="snow gif">
-            <p class=caption>
-              The particles may be a bit hard to see, but if you enlarge the image, you should be able to see the particles accelerating
-            </p>
-           </div>
-           <div class=flex-body-box>
-            <h2 class=body>Blinn-Phong lighting</h2>
-            <p class=body>
-               I implemented Blinn-Phong lighting for this project with ambient, diffuse, and specular components. There is a light source attached to the large island and a second light source attached to the smaller island.
-            </p>
-            <img class=responsive-image src="light.gif" alt="light gif">
-            <p class=caption>
-              Light reflected on the cloud by the light source from the little island
-            </p>
-           </div>
-           <div class=flex-body-box>
-            <h2 class=body>Texture mapping</h2>
-            <p class=body>
-               I also implemented texture mapping on the trees, lantern, and tank. As a note, the tank turret is animated to rotate side to side and the lantern’s animated to become brighter and dimmer.
-            </p>
-            <img class=responsive-image src="texture.gif" alt="texture gif">
-            <p class=caption>
-              Can you spot the tank? It's very well camouflaged
-            </p>
-           </div>
-           <div class=flex-body-box>
-            <h2 class=body>References</h2>
-            <p class=body>
-               Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
-               Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
-               Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
-                              <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
-            </p>
-           </div>
-        </div>
+            <ul class=body>
+               <li class=body> 
+                  Collision detection
+               </li>
+               <li class=body> 
+                  Orbital Kinematics model
+               </li>
+               <li class=body> 
+                  Animated particle system
+               </li>
+               <li class=body> 
+                  Blinn-Phong lighting
+               </li>
+               <li class=body> 
+                  Texture mapping
+               </li>
+            </ul>
+            </div>
+
+            <div class=flex-body-box>
+               <h2 class=body>Collision detection</h2>
+               <p class=body>
+               Collisions are implemented as perfectly elastic, using vector math. A collision occurs when the distance between two bodies is less than or equal to the sum of their radii. When a collision occurs, the vector normal of collision is computed. Then the dot product of the difference in velocities and the vector normal of collision is computed to get the relative velocity of the bodies along the vector normal of collision. This relative velocity is subtracted and added to the velocities of the bodies, and then mass weighting is applied. 
+               </p>
+               <img class=responsive-image src="collision.gif" alt="collision gif">
+               <p class=caption>
+               After the collision, the asteroid follows a curved path because of gravitational force
+               </p>
+            </div>
+            <div class=flex-body-box>
+               <h2 class=body>Orbital Kinematics model</h2>
+               <p class=body>
+                  Each body has a radius, mass, position, velocity, and acceleration. These, along with the gravitational constant, are initially set manually to create a stable system. When the model runs, the acceleration is computed according to Cowell’s method (for Orbit Modeling) and velocity and position are set accordingly. This was implemented such that all the bodies exert gravitational force on each other. In practice however, the motions of the bodies are mostly determined by the largest island as it had the largest mass by far.
+               </p>
+               <img class=math src="cowells.svg" alt="cowells formula">
+               <p class=caption>
+               Cowell's method
+               </p>
+            </div>
+            <div class=flex-body-box>
+               <h2 class=body>Animated particle system</h2>
+               <p class=body>
+                  The snow falling from the cloud onto the large island is what constitutes the particle system. Particles are spawned randomly within a disk in the cloud itself and accelerate downward for a given time. The particle positions are also updated according to the position of the large island itself.
+               </p>
+               <img class=responsive-image src="snow.gif" alt="snow gif">
+               <p class=caption>
+               The particles may be a bit hard to see, but if you enlarge the image, you should be able to see the particles accelerating
+               </p>
+            </div>
+            <div class=flex-body-box>
+               <h2 class=body>Blinn-Phong lighting</h2>
+               <p class=body>
+                  I implemented Blinn-Phong lighting for this project with ambient, diffuse, and specular components. There is a light source attached to the large island and a second light source attached to the smaller island.
+               </p>
+               <img class=responsive-image src="light.gif" alt="light gif">
+               <p class=caption>
+               Light reflected on the cloud by the light source from the little island
+               </p>
+            </div>
+            <div class=flex-body-box>
+               <h2 class=body>Texture mapping</h2>
+               <p class=body>
+                  I also implemented texture mapping on the trees, lantern, and tank. As a note, the tank turret is animated to rotate side to side and the lantern’s animated to become brighter and dimmer.
+               </p>
+               <img class=responsive-image src="texture.gif" alt="texture gif">
+               <p class=caption>
+               Can you spot the tank? It's very well camouflaged
+               </p>
+            </div>
+            <div class=flex-body-box>
+               <h2 class=body>References</h2>
+               <p class=body>
+                  Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
+                  Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
+                  Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
+                                 <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
+               </p>
+            </div>
+            </div>   
+            </div>
+                        
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="#top">hehe</a>
+
+         </div>
       </div>
    </body>
 </html>
