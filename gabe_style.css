@@ -1,23 +1,95 @@
 @font-face {
-  font-family: Cascadia;
-  src: url(Cascadia\ Mono\ PL\ SemiLight\ 350.otf);
+ font-family: Cascadia;
+ src: url(Cascadia\ Mono\ PL\ SemiLight\ 350.otf);
 }
 
 div {
-	font-family: Cascadia;
+   font-family: Cascadia;
 }
-
-
 body {
-  background-color: white;
+ background-color: #d8cfc7;
 }
 
-h1 {
-  color: Black;
-  margin-left: 20px;
+ul.nav {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+li.nav {
+   display: inline-flex;
+   justify-content: flex-start;
+}
+
+a.nav {
+   padding: 1em;
+   background-color: #aba299;
+}
+
+ul.body {
+   list-style-type: circle;
+   margin: 0em;
+}
+
+li.body {
+   margin: 0em;
+   
+}
+
+h2.body {
+   margin: .5em 0em;
+   padding: 0em 0em;
+   
+}
+
+p.body {
+   margin: .5em 0em;  
+}
+
+p.caption {
+   margin: 0em 0em;
+   padding: 0em 0em;
+   font-size: 70%;
+}
+
+.body-div {
+   background-color: #c4bab2;
+   padding: 1em;
+   margin:1em;
+}
+
+.flex-body-box{
+   background-color: #d1c6bc;
+   display: flex;
+   justify-content: left;
+   flex-direction: column;
+
+   padding-top: 0em;
+   padding-bottom: .7em;
+   padding-left: 1em;
+   padding-right: 1em;
+   margin:2em;
 }
 
 .flex-container {
-	display: flex;
-	justify-content: center;
+   display: flex;
+   justify-content: center;
+}
+
+.line-break {
+   width: 100%;
+}
+
+img.responsive-image {
+   display: flex;
+   justify-content: center;
+   max-width: 100%;
+   height: auto;
+}
+
+img.math {
+   display: flex;
+   align-items: center;
+   max-width: 10em;
+   height: auto;
 }
