@@ -76,11 +76,35 @@ p.caption {
    justify-content: center;
 }
 
+.project-thumb-container {
+   margin: .2em .2em 0 0;  
+   background-color: #c4bab2;
+   color: black;
+   font-family: Cascadia;
+   padding: 1em;
+   margin: 1em;
+   font-size: 1em;
+   overflow: auto;
+   max-width:40em;
+}
+
+.project-thumb-content {
+   margin-left: .1em;
+}
+
 img.responsive-image {
    display: flex;
    justify-content: center;
    max-width: 100%;
    height: auto;
+}
+
+img.thumb-image {
+   display: flex;
+   justify-content: left;
+   height: 10em;
+   margin: 1em;
+   float:left;
 }
 
 img.math {
@@ -91,18 +115,19 @@ img.math {
 }
 
 .dropdownbtn {
-   background-color: #c4bab2;
+   background-color: #c6b3a1;
    color: black;
    font-family: Cascadia;
-   padding: 1em;
-   margin: 1em;
+   padding: .5em;
+   margin: .5em 0em;
    font-size: 1em;
-   border: none;
+   border: 5px solid #333;
    cursor: pointer;
 }
 
-.dropdownbtn:hover, .dropdownbtn:focus {
-   background-color: #d1c6bc;
+/*::focus to get link 'sticky' highlighting behavior*/
+.dropdownbtn:hover {
+   background-color: #e6dacf;
  }
 
  .dropdown {
@@ -113,6 +138,7 @@ img.math {
    display: none;
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
    z-index: 1;
+   
  }
 
  .dropdown-content a {
@@ -122,10 +148,9 @@ img.math {
  }
 
  .dropdown-content a:hover {
-    background-color: #ddd
+    background-color: #e6dacf
    }
 
  .show {
     display:flex;
-
    }
