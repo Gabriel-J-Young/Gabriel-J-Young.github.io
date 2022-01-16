@@ -49,7 +49,7 @@ p.body {
 p.caption {
    margin: 0em 0em;
    padding: 0em 0em;
-   font-size: 70%;
+   font-size: 90%;
 }
 
 .body-div {
@@ -96,6 +96,13 @@ img.responsive-image {
    display: flex;
    justify-content: center;
    max-width: 100%;
+   height: auto;
+}
+
+img.responsive-image-40em {
+   display: flex;
+   justify-content: center;
+   max-width: 40em;
    height: auto;
 }
 
