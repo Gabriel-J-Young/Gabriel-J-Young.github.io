@@ -1,174 +1,237 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Gabriel Young's Portfolio</title>
-      <link rel="stylesheet" type="text/css" href="gabe_style.css">
-      <script src="personal-website-script.js"></script>
-      <link rel="icon" href="favicon.ico">
-   </head>
-   <body>
-      <a id="top"></a>
-       <div>
-         <ul class=nav>
-            <li class=nav ><a class=nav href="https://gabrieljyoung.com">Personal Website</a></li>
-            <li class=nav><a class=nav href="https://github.com/Gabriel-J-Young">GitHub</a></li>
-            <li class=nav><a class=nav href="mailto:gabrieljacksonyoung@gmail.com">Email (gabrieljacksonyoung@gmail.com)</a></li>
-        </ul>
-      
-         <h1 class="flex-container line-break">
-            Gabriel Young's Portfolio
-         </h1>
-         <div class=flex-body-box>
-            <p>
-               Hi, I'm Gabriel, a Computer Science student from Cal Poly SLO.
-            </p>
-         </div>
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Gabriel Young's Portfolio</title>
+         <link rel="stylesheet" type="text/css" href="gabe_style.css">
+         <script src="personal-website-script.js"></script>
+         <link rel="icon" href="favicon.ico">
+      </head>
+      <body>
+         <a id="top"></a>
+         <div>
+            <ul class=nav>
+               <li class=nav ><a class=nav href="https://gabrieljyoung.com">Personal Website</a></li>
+               <li class=nav><a class=nav href="https://github.com/Gabriel-J-Young">GitHub</a></li>
+               <li class=nav><a class=nav href="mailto:gabrieljacksonyoung@gmail.com">Email (gabrieljacksonyoung@gmail.com)</a></li>
+         </ul>
          
-
-         <h2>Projects:</h2>
-
-        <div class=dropdown>
-           <div class="project-thumb-container">
-              <img class=thumb-image src="islands_thumb.jpg" alt="orbiting islands thumbnail">
-              <div class="project-thumb-content">
-                 <h3>Orbiting Islands</h3>
-                 <p>A computer graphics project with original blender models and a simple physics simulation</p>
-              </div>
-              <button onclick="myFunction()" class="dropdownbtn">Toggle</button>
-           </div>
-           <div id="myDropdown" class="dropdown-content">
-            <div class=body-div>
-            <h1 class="flex-container">
-               Orbiting Islands<br>
+            <h1 class="flex-container line-break">
+               Gabriel Young's Portfolio
             </h1>
-
             <div class=flex-body-box>
                <p>
-                  This Project was made for CSC 471 at Cal Poly in fall quarter 2021.
+                  Hi, I'm Gabriel, a Computer Science student from Cal Poly SLO (San Luis Obispo).
                </p>
                <p>
-               For my final project, I created two floating islands, and asteroid in blender, and put them together in a kinematics model to orbit each other. My initial idea was to model something like the three-body problem, with three bodies of roughly equal mass exerting orbital forces on each other. Due to time constraints, it proved impractical to find an initial stable configuration to model. Therefore, I decided to model a more traditional orbital system with one body having a dominant amount of mass. In this project that body is the largest island.
-            </p>
-            <p>
-               For this project I made sure to implement technically challenging features but making a visually appealing and cohesive scene was very important to me, hence the decision to create most of the models.
-            </p>
-            <img class=responsive-image src="summary.gif" alt="overview gif">
-            <p>
-               I implemented: 
-            </p>
-            <ul class=body>
-               <li class=body> 
-                  Collision detection
-               </li>
-               <li class=body> 
-                  Orbital Kinematics model
-               </li>
-               <li class=body> 
-                  Animated particle system
-               </li>
-               <li class=body> 
-                  Blinn-Phong lighting
-               </li>
-               <li class=body> 
-                  Texture mapping
-               </li>
-            </ul>
+                  Some of my proffessional interets are Computer Vision, Robotics and Automation, Computer Graphics, and Data analytics.
+               </p>
+               <p>
+                  My personal interests include hiking, backpacking, History, and Cooking.
+               </p>
+               <img class=responsive-image style="max-width:40em; margin-right: auto; margin-left: auto;" src="portfoilo_pic.png" alt="hobby pic">
+               <p class=caption style="align-items: center; margin-left: auto; margin-right: auto;">
+                  Death Valley near Wildrose Peak Dec 2021
+                  </p>
             </div>
+            
 
-            <div class=flex-body-box>
-               <h2 class=body>Collision detection</h2>
-               <p class=body>
-               Collisions are implemented as perfectly elastic, using vector math. A collision occurs when the distance between two bodies is less than or equal to the sum of their radii. When a collision occurs, the vector normal of collision is computed. Then the dot product of the difference in velocities and the vector normal of collision is computed to get the relative velocity of the bodies along the vector normal of collision. This relative velocity is subtracted and added to the velocities of the bodies, and then mass weighting is applied. 
-               </p>
-               <img class=responsive-image src="collision.gif" alt="collision gif">
-               <p class=caption>
-               After the collision, the asteroid follows a curved path because of gravitational force
-               </p>
-            </div>
-            <div class=flex-body-box>
-               <h2 class=body>Orbital Kinematics model</h2>
-               <p class=body>
-                  Each body has a radius, mass, position, velocity, and acceleration. These, along with the gravitational constant, are initially set manually to create a stable system. When the model runs, the acceleration is computed according to Cowell’s method (for Orbit Modeling) and velocity and position are set accordingly. This was implemented such that all the bodies exert gravitational force on each other. In practice however, the motions of the bodies are mostly determined by the largest island as it had the largest mass by far.
-               </p>
-               <img class=math src="cowells.svg" alt="cowells formula">
-               <p class=caption>
-               Cowell's method
-               </p>
-            </div>
-            <div class=flex-body-box>
-               <h2 class=body>Animated particle system</h2>
-               <p class=body>
-                  The snow falling from the cloud onto the large island is what constitutes the particle system. Particles are spawned randomly within a disk in the cloud itself and accelerate downward for a given time. The particle positions are also updated according to the position of the large island itself.
-               </p>
-               <img class=responsive-image src="snow.gif" alt="snow gif">
-               <p class=caption>
-               The particles may be a bit hard to see, but if you enlarge the image, you should be able to see the particles accelerating
-               </p>
-            </div>
-            <div class=flex-body-box>
-               <h2 class=body>Blinn-Phong lighting</h2>
-               <p class=body>
-                  I implemented Blinn-Phong lighting for this project with ambient, diffuse, and specular components. There is a light source attached to the large island and a second light source attached to the smaller island.
-               </p>
-               <img class=responsive-image src="light.gif" alt="light gif">
-               <p class=caption>
-               Light reflected on the cloud by the light source from the little island
-               </p>
-            </div>
-            <div class=flex-body-box>
-               <h2 class=body>Texture mapping</h2>
-               <p class=body>
-                  I also implemented texture mapping on the trees, lantern, and tank. As a note, the tank turret is animated to rotate side to side and the lantern’s animated to become brighter and dimmer.
-               </p>
-               <img class=responsive-image src="texture.gif" alt="texture gif">
-               <p class=caption>
-               Can you spot the tank? It's very well camouflaged
-               </p>
-            </div>
-            <div class=flex-body-box>
-               <h2 class=body>References</h2>
-               <p class=body>
-                  Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
-                  Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
-                  Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
-                                 <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
-               </p>
-            </div>
-            </div>   
-            </div>
-                        
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>            
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <a href="#top">hehe</a>
+            <h2>Projects:</h2>
 
+         <div class=dropdown>
+            <div class="project-thumb-container">
+               <img class=thumb-image src="orbitingIslands/islands_thumb.jpg" alt="orbiting islands thumbnail">
+               <div class="project-thumb-content">
+                  <h3>Orbiting Islands</h3>
+                  <p>A computer graphics project with original blender models and a simple physics simulation</p>
+               </div>
+               <button onclick="toggleOrbitingIslands()" class="dropdownbtn">Toggle</button>
+            </div>
+            <div id="orbitingIslandDropdown" class="dropdown-content">
+               <div class=body-div>
+               <h1 class="flex-container">
+                  Orbiting Islands<br>
+               </h1>
+
+               <div class=flex-body-box>
+                  <p>
+                     This Project was made for CSC 471 at Cal Poly in fall quarter 2021.
+                  </p>
+                  <p>
+                  For my final project, I created two floating islands, and asteroid in blender, and put them together in a kinematics model to orbit each other. My initial idea was to model something like the three-body problem, with three bodies of roughly equal mass exerting orbital forces on each other. Due to time constraints, it proved impractical to find an initial stable configuration to model. Therefore, I decided to model a more traditional orbital system with one body having a dominant amount of mass. In this project that body is the largest island.
+               </p>
+               <p>
+                  For this project I made sure to implement technically challenging features but making a visually appealing and cohesive scene was very important to me, hence the decision to create most of the models.
+               </p>
+               <img class=responsive-image src="orbitingIslands/summary.gif" alt="overview gif">
+               <p>
+                  I implemented: 
+               </p>
+               <ul class=body>
+                  <li class=body> 
+                     Collision detection
+                  </li>
+                  <li class=body> 
+                     Orbital Kinematics model
+                  </li>
+                  <li class=body> 
+                     Animated particle system
+                  </li>
+                  <li class=body> 
+                     Blinn-Phong lighting
+                  </li>
+                  <li class=body> 
+                     Texture mapping
+                  </li>
+               </ul>
+               </div>
+
+               <div class=flex-body-box>
+                  <h2 class=body>Collision detection</h2>
+                  <p class=body>
+                  Collisions are implemented as perfectly elastic, using vector math. A collision occurs when the distance between two bodies is less than or equal to the sum of their radii. When a collision occurs, the vector normal of collision is computed. Then the dot product of the difference in velocities and the vector normal of collision is computed to get the relative velocity of the bodies along the vector normal of collision. This relative velocity is subtracted and added to the velocities of the bodies, and then mass weighting is applied. 
+                  </p>
+                  <img class=responsive-image src="orbitingIslands/collision.gif" alt="collision gif">
+                  <p class=caption>
+                  After the collision, the asteroid follows a curved path because of gravitational force
+                  </p>
+               </div>
+               <div class=flex-body-box>
+                  <h2 class=body>Orbital Kinematics model</h2>
+                  <p class=body>
+                     Each body has a radius, mass, position, velocity, and acceleration. These, along with the gravitational constant, are initially set manually to create a stable system. When the model runs, the acceleration is computed according to Cowell’s method (for Orbit Modeling) and velocity and position are set accordingly. This was implemented such that all the bodies exert gravitational force on each other. In practice however, the motions of the bodies are mostly determined by the largest island as it had the largest mass by far.
+                  </p>
+                  <img class=math src="orbitingIslands/cowells.svg" alt="cowells formula">
+                  <p class=caption>
+                  Cowell's method
+                  </p>
+               </div>
+               <div class=flex-body-box>
+                  <h2 class=body>Animated particle system</h2>
+                  <p class=body>
+                     The snow falling from the cloud onto the large island is what constitutes the particle system. Particles are spawned randomly within a disk in the cloud itself and accelerate downward for a given time. The particle positions are also updated according to the position of the large island itself.
+                  </p>
+                  <img class=responsive-image src="orbitingIslands/snow.gif" alt="snow gif">
+                  <p class=caption>
+                  The particles may be a bit hard to see, but if you enlarge the image, you should be able to see the particles accelerating
+                  </p>
+               </div>
+               <div class=flex-body-box>
+                  <h2 class=body>Blinn-Phong lighting</h2>
+                  <p class=body>
+                     I implemented Blinn-Phong lighting for this project with ambient, diffuse, and specular components. There is a light source attached to the large island and a second light source attached to the smaller island.
+                  </p>
+                  <img class=responsive-image src="orbitingIslands/light.gif" alt="light gif">
+                  <p class=caption>
+                  Light reflected on the cloud by the light source from the little island
+                  </p>
+               </div>
+               <div class=flex-body-box>
+                  <h2 class=body>Texture mapping</h2>
+                  <p class=body>
+                     I also implemented texture mapping on the trees, lantern, and tank. As a note, the tank turret is animated to rotate side to side and the lantern’s animated to become brighter and dimmer.
+                  </p>
+                  <img class=responsive-image src="orbitingIslands/texture.gif" alt="texture gif">
+                  <p class=caption>
+                  Can you spot the tank? It's very well camouflaged
+                  </p>
+               </div>
+               <div class=flex-body-box>
+                  <h2 class=body>References</h2>
+                  <p class=body>
+                     Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
+                     Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
+                     Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
+                                    <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
+                  </p>
+               </div>
+               </div>   
+               </div>
+            </div>
+            <div class=dropdown>
+               <div class="project-thumb-container">
+                  <img class=thumb-image src="watercv/watercv_thumb.jpg" alt="orbiting islands thumbnail">
+                  <div class="project-thumb-content">
+                     <h3>WaterCV</h3>
+                     <p>A winning hackathon project to improve the wastewater treatment process</p>
+                  </div>
+                  <button onclick="toggleWaterCV()" class="dropdownbtn">Toggle</button>
+               </div>
+               <div id="waterCVDropdown" class="dropdown-content">
+               <div class=body-div>
+               <h1 class="flex-container">
+                  WaterCV<br>
+               </h1>
+   
+               <div class=flex-body-box>
+                  <p>
+                     This project was made for the 'SLO hacks go' hackathon in November 2019.
+                  </p>
+                  <p>
+                     During this project, I worked with three other team members to create a program to help quantitatively analyze wastewater during the wastewater treatment process. Specifically, the goal of this program was to measure the “mixed liquor quality” with computer vison.
+                  </p>
+                  <p>
+                     “Mixed liquor quality” refers to how much solid biomass still mixed in with the wastewater in an aeration tank. The wastewater plant we were dealing with used the “active sludge” method for filtering wastewater, which consists of an aeration tank, at which point air is injected into the wastewater, and a settling tank, where the water “settles” and the biomass physically separates from the wastewater, with only clear, treated water remaining.
+                  </p>
+               </div>
+
+               <div class=flex-body-box>
+                  <h2 class=body>Going to the treatment plant</h2>
+                  <p class=body>
+                     At the start of the project, we drove over the SLO wastewater treatment plant to learn more about the wastewater treatment process from the workers at the plant, and to collect data in the form of videos of the water in the aeration tank.
+                  </p>
+                  <img class=responsive-image-40em src="watercv/wastewater_plant.jpg" alt="wastewater facility">
+                  <p class=caption>
+                  An aeration tank at the SLO wastewater treatment plant.
+                  </p>
+               </div>
+
+               <div class=flex-body-box>
+                  <h2 class=body>Writing the Computer Vision Program</h2>
+                  <p class=body>
+                     The computer vision program first converted the input video into the HSV color space, to improve image segmentation and make the system more robust against varying light levels. The program then used a simple threshold to segment the bubbles from the water and calculated the percent of the frame that was covered by water.  Then, the average color of the water was computed. I attempted to implement a way to calculate the size of the individual bubbles by matching the bubbles with textures through key points, but was not able to due to time constraints.
+                  </p>
+                  <img class=responsive-image-40em  src="watercv/wastewater_close.jpg" alt="snow gif">
+                  <p class=caption>
+                     An example frame of what the computer vision program would run on.
+                  </p>
+               </div>
+
+               <div class=flex-body-box>
+                  <h2 class=body>Final Product</h2>
+                  <p class=body>
+                     We displayed our project as a combination of raw video of the wastewater, a visualization of the program’s segmentation, and a website to display the computed data.
+                  </p>
+                  <img class=responsive-image src="watercv/final_product.PNG" alt="light gif">
+                  <p class=caption>
+                  Final product visualization
+                  </p>
+               </div>
+
+               <div class=flex-body-box>
+                  <h2 class=body>Team Members</h2>
+                  <p class = body>
+                     I worked on this project with Jasmine D, Linnea Holmen, and John Yee.
+                  </p>
+                  <p class = body>
+                     I worked with OpenCV in C++ to process video and get relevant quantitative information from video footage of wastewater in a tank where it is treated. Jasmine D was the industry expert that helped identify the problem and provided access to the information we used in our demo. Linnea Holmen worked on the ideation process, the final presentation, and finding ways to simply explain the complicated process of wastewater treatment. John Yee created the web page which read the data and displayed it in an easy-to-read table.
+                  </p>
+                  <img class=responsive-image-40em  src="watercv/team_pic.jpg" alt="team pic">
+                  <p class=caption>
+                  Team members, Nov 2019
+                  </p>
+               </div>
+               <!--<div class=flex-body-box>
+                  <h2 class=body>References</h2>
+                  <p class=body>
+                     Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
+                     Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
+                     Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
+                                    <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
+                  </p>
+               </div>-->
+               </div>  
+            </div>
+ 
          </div>
-      </div>
-   </body>
-</html>
+      </body>
+   </html>
