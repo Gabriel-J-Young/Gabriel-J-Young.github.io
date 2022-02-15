@@ -21,6 +21,11 @@ li.nav {
    justify-content: flex-start;
 }
 
+/*li.nav-right {
+
+   justify-content: flex-end;
+}*/
+
 a.nav {
    padding: 1em;
    background-color: #aba299;
