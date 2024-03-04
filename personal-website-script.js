@@ -7,6 +7,18 @@ function toggleOrbitingIslands() {
 function toggleWaterCV() {
     document.getElementById("waterCVDropdown").classList.toggle("show");
   }
+
+function toggleConePeak2021() {
+    document.getElementById("ConePeak2021Dropdown").classList.toggle("show");
+  }
+
+function toggleTelescopePeak2022() {
+    document.getElementById("TelescopePeak2022Dropdown").classList.toggle("show");
+  }
+
+function toggleMicroMouse() {
+    document.getElementById("MicroMouseDropdown").classList.toggle("show");
+  }
   
   // Close the dropdown menu if the user clicks outside of it
   // window.onclick = function(event) {
