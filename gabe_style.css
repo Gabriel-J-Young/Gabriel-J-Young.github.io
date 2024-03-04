@@ -21,6 +21,11 @@ li.nav {
    justify-content: flex-start;
 }
 
+li.nav-center {
+   display: inline-flex;
+   justify-content: center;
+}
+
 /*li.nav-right {
 
    justify-content: flex-end;

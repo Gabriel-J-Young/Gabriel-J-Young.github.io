@@ -10,8 +10,9 @@
          <a id="top"></a>
          <div>
             <ul class=nav>
-               <li class=nav ><a class=nav href="https://gabrieljyoung.com">Homepage</a></li>
-               <!--<li class=nav><a class=nav href="/Cascadia_map.html">Cascadia Map</a></li>-->
+               <li class=nav ><a class=nav href="/index.html">Homepage</a></li>
+               <li class=nav><a class=nav href="/Hikes.html">Hikes</a></li>
+               <li class=nav><a class=nav href="/Cascadia_map.html">Cascadia Map</a></li>
                <li class=nav><a class=nav href="https://github.com/Gabriel-J-Young">GitHub</a></li>
                <li class=nav><a class=nav href="https://www.linkedin.com/in/gabriel-young-ab2a1b161/">LinkedIn</a></li>
                <li class=nav><a class=nav href="mailto:gabrieljacksonyoung@gmail.com">Email: gabrieljacksonyoung@gmail.com</a></li>
@@ -29,154 +30,89 @@
                   Hi, I'm Gabriel, a Computer Science student from Cal Poly SLO (San Luis Obispo).
                </p>
                <p>
+                  As of March 2024, I'm studying Japanese at Waseda University through a one-year study abroad program!
+               </p>
+               <p>
                   Some of my professional interests are Computer Vision, Robotics and Automation, Computer Graphics, and Data analytics.
                </p>
                <p>
                   My personal interests include hiking, backpacking, history, and cooking.
                </p>
-               <img class=responsive-image style="max-width:40em; margin-right: auto; margin-left: auto;" src="portfoilo_pic.png" alt="hobby pic">
+               <p>
+                  Feel free to take a look at my projects!
+               </p>
+                  <li class=nav-center><a class=nav href="index.html#Projects-anchor">Projects</a></li>
+                  <br>
+               <img class=responsive-image style="max-width:40em; margin-right: auto; margin-left: auto;" src="assets/portfoilo_pic.png" alt="hobby pic">
                <p class=caption style="align-items: center; margin-left: auto; margin-right: auto;">
                   Death Valley near Wildrose Peak Dec 2021
                   </p>
             </div>
             
-            <h2>Hikes:</h2>
 
-            <div id="telscopePeak2022Dropdown" >
-               <div class=body-div>
-               <h1 class="flex-container">
-                  Telescope Peak<br>
-               </h1>
 
-               <p>This was a hike I did after returning to death valley a second time after failing to summit Wildrose peak in 2021</p>
-               
-               <h4>Stats:</h4>
-               <ul>
-                  <li><p>Date: December 13 2022</p></li>
-                  <li><p>Elevation at summit: 3368 m (11,049 ft)</p></li>
-                  <li><p>Elevation gain: 1426 m (4,677 ft)</p></li>
-                  <li><p>Distance: 26 km (16 miles)</p></li>
-                  <li><p>Time: 12 hr</p></li>
+         <h2 id="Projects-anchor">Projects:</h2>
 
-               </ul>
-               
-  
-
-               <div class=flex-body-box>
-                  <h2 class=body>Starting at Charcoal Kilns</h2>
-                  <p class=body>
-                     Unlike 2023, there was nobody else up here, and the night before I made and ate dinner inside one of the old kilns
-                  </p>
-                  <img class=responsive-image-40em src="start_at_kilns.jpg" alt="kilns">
-                  <p class=caption>
-                  The kilns are on the left
-                  </p>
+         <div class="dropdown">
+            <div class="project-thumb-container">
+               <img class=thumb-image src="wmmc/rat_thumb.jpg" alt="rat_thumb">
+               <div class="project-thumb-content">
+                  <h3>Waseda Micro Mouse Club</h3>
+                  <p>A little Maze following mouse!</p>
                </div>
+               <button onclick="toggleMicroMouse()" class="dropdownbtn">Toggle</button>
+            </div>
+            <div id="MicroMouseDropdown" class="dropdown-content">
+               <div class="body-div">
+                  <h1 class="flex-container">
+                     Waseda Micro Mouse<br>
+                  </h1>
 
-               <div class=flex-body-box>
-                  <h2 class=body>The hike up</h2>
-                  <p class=body>
-                     I didn't really think to take photos on my way up, which is a shame, because the sunlight was best at that time. But I remeber getting near the summit, losing the trail (and having to tramp back down a ways to retrive my fallen walking stick)
+                  <div class=flex-body-box>
+                     <p>
+                        I'm currently working on a maze-following robot as part of Waseda's micro mouse club.
+                     </p>
+                     <p>
+                     This robot is fully soldered together by me. The code to run it is a C++ codebase with japanese Comments. So far I've been able to:
                   </p>
+                  <ul class=body>
+                     <li class=body> 
+                        Build the robot ~3 weeks
+                     </li>
+                     <li class=body> 
+                        Set up the dev environment ~2 weeks (aaaaaaaaaAAAAAaaaaargh)
+                     </li>
+                     <li class=body> 
+                        Deploy modified code on to the robot
+                     </li>
+                     <li class=body> 
+                        Properly calibrate the IR sensors with the help of a command-line utility
+                     </li>
+                  </ul>
+                  <p>Now I'm working on:</p>
+                  <ul class=body>
+                     <li class=body> 
+                        Refactoring the code to modern (understandable) standards
+                     </li>
+                     <li class=body> 
+                        Getting the robot through a complete maze 
+                     </li>
+                  </ul>
+                  </div>
+
+                  <div class=flex-body-box>
+                     <p>Front View</p>
+                     <img class=responsive-image src="wmmc/bottom_rat.jpg" alt="bottom rat">
+                  </div>
+
+                  <div class=flex-body-box>
+                     <p>Scuffed IR Demo</p>
+                     <img class=responsive-image src="wmmc/scuffed_ir_demo.gif" alt="scuffed_ir_demo gif">
+                  </div>
                </div>
-
-               <div class=flex-body-box>
-                  <h2 class=body>The summit</h2>
-                  <p class=body>
-                     The Summit was very beautiful, but I was not fully prepared for the wind. I left a note in the ammo box at the top and took some photos. 
-                  </p>
-                  <img class=responsive-image-40em src="summit.gif" alt="summit gif">
-                  <p class=caption>
-                  
-                  </p>
-                  <img class=responsive-image-40em src="pano.jpg" alt="panorama">
-                  <p class=caption>
-                  
-                  </p>
-               </div>
-
-               <div class=flex-body-box>
-                  <h2 class=body>Decent</h2>
-                  <p class=body>
-                     I caught the sunset about an hour into my decent, which was pretty, but meant I did a lot of the hike in the dark
-                  </p>
-                  <img class=responsive-image-40em src="decent.jpg" alt="kilns">
-                  <p class=caption>
-                  
-                  </p>
-               </div>
-
-               <div class=flex-body-box>
-                  <h2 class=body>Summer Trailhead</h2>
-                  <p class=body>
-                     This is the closer trailhead, inaccesable by car during winter
-                  </p>
-                  <img class=responsive-image-40em src="sign.jpg" alt="kilns">
-                  <p class=caption>
-                  
-                  </p>
-               </div>
-
-               <div class=flex-body-box>
-                  <h2 class=body>Ending</h2>
-                  <p class=body>
-                     I got back well after sundown, which was a bit eerie, but quite fun.
-                  </p>
-                  <img class=responsive-image-40em src="dark_headlamp.jpg" alt="kilns">
-                  <p class=caption>
-                  
-                  </p>
-               </div>
-
-               <div class=flex-body-box>
-                  <h2 class=body>Bonus</h2>
-                  <p class=body>
-                     I saw some burros on the drive down.
-                  </p>
-                  <img class=responsive-image-40em src="burros.jpg" alt="kilns">
-                  <p class=caption>
-                  
-                  </p>
-               </div>
-
-              
-               </div>  
             </div>
 
-            <div id="telscopePeak2022Dropdown" >
-               <div class=body-div>
-               <h1 class="flex-container">
-                  Cone Peak<br>
-               </h1>
-
-               <p>This was a hike I did after returning to death valley a second time after failing to summit Wildrose peak in 2021</p>
-               
-               <h4>Stats:</h4>
-               <ul>
-                  <li><p>Date: Summer of '21</p></li>
-                  <li><p>Elevation at summit: 1788 m (5,865 ft)</p></li>
-                  <li><p>Elevation gain: 1788 m (5,865 ft)</p></li>
-                  <li><p>Distance: WIP</p></li>
-                  <li><p>Time: WIP</p></li>
-
-               </ul>
-               
-               <div class=flex-body-box>
-                  <h2 class=body>One of the Big Sur trips of Covid Summer '21</h2>
-                  <p class=body>
-                     This picture was taken at Cone Peak. I then went down via the sea-to-summit trail during which I ran out of water. This made the hike a bit of a trial. But the hike remains a great memory.
-                  </p>
-                  <img class=responsive-image-40em src="assets/iconic_big_sur.jpg" alt="big sur cone peak">
-                  <p class=caption>
-                  From the firewatch station at the top of Cone peak.
-                  </p>
-               </div>
-
-              
-               </div>  
-            </div>
-
-            <h2>Projects:</h2>
+         </div>
 
          <div class=dropdown>
             <div class="project-thumb-container">
@@ -289,6 +225,8 @@
                </div>
             </div>
             <div class=dropdown>
+
+
                <div class="project-thumb-container">
                   <img class=thumb-image src="watercv/watercv_thumb.jpg" alt="orbiting islands thumbnail">
                   <div class="project-thumb-content">
@@ -361,15 +299,6 @@
                   Team members, Nov 2019
                   </p>
                </div>
-               <!--<div class=flex-body-box>
-                  <h2 class=body>References</h2>
-                  <p class=body>
-                     Collisions: <a href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br>
-                     Orbits: <a href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br>
-                     Blender Stuff: <a href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
-                                    <a href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
-                  </p>
-               </div>-->
                </div>  
             </div>
  
