@@ -19,6 +19,11 @@ function toggleTelescopePeak2022() {
 function toggleMicroMouse() {
     document.getElementById("MicroMouseDropdown").classList.toggle("show");
   }
+
+function toggleSlaveShipDatabase() {
+    document.getElementById("SlaveShipDatabaseDropdown").classList.toggle("show");
+  }
+
   
   // Close the dropdown menu if the user clicks outside of it
   // window.onclick = function(event) {
