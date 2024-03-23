@@ -1,0 +1,173 @@
+@font-face {
+ font-family: Cascadia;
+ src: url(Cascadia\ Mono\ PL\ SemiLight\ 350.otf);
+}
+
+div {
+   font-family: Cascadia;
+}
+body {
+ background-color: #d8cfc7;
+}
+
+ul.nav {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+li.nav {
+   display: inline-flex;
+   justify-content: flex-start;
+}
+
+li.nav-center {
+   display: inline-flex;
+   justify-content: center;
+}
+
+/*li.nav-right {
+
+   justify-content: flex-end;
+}*/
+
+a.nav {
+   padding: 1em;
+   background-color: #aba299;
+}
+
+ul.body {
+   list-style-type: circle;
+   margin: 0em;
+}
+
+li.body {
+   margin: 0em;
+   
+}
+
+h2.body {
+   margin: .5em 0em;
+   padding: 0em 0em;
+   
+}
+
+p.body {
+   margin: .5em 0em;  
+}
+
+p.caption {
+   margin: 0em 0em;
+   padding: 0em 0em;
+   font-size: 90%;
+}
+
+.body-div {
+   background-color: #c4bab2;
+   padding: 1em;
+   margin:1em;
+}
+
+.flex-body-box{
+   background-color: #d1c6bc;
+   display: flex;
+   justify-content: left;
+   flex-direction: column;
+   max-width: 100%;
+   padding-top: 0em;
+   padding-bottom: .7em;
+   padding-left: 1em;
+   padding-right: 1em;
+   margin:2em;
+}
+
+.flex-container {
+   display: flex;
+   justify-content: center;
+}
+
+.project-thumb-container {
+   margin: .2em .2em 0 0;  
+   background-color: #c4bab2;
+   color: black;
+   font-family: Cascadia;
+   padding: 1em;
+   margin: 1em;
+   font-size: 1em;
+   overflow: auto;
+   max-width:40em;
+}
+
+.project-thumb-content {
+   margin-left: .1em;
+}
+
+img.responsive-image {
+   display: flex;
+   justify-content: center;
+   max-width: 100%;
+   height: auto;
+}
+
+img.responsive-image-40em {
+   display: flex;
+   justify-content: center;
+   max-width: 40em;
+   height: auto;
+}
+
+img.thumb-image {
+   display: flex;
+   justify-content: left;
+   height: 10em;
+   margin: 1em;
+   float:left;
+}
+
+img.math {
+   display: flex;
+   align-items: center;
+   max-width: 10em;
+   height: auto;
+}
+
+.dropdownbtn {
+   background-color: #c6b3a1;
+   color: black;
+   font-family: Cascadia;
+   padding: .5em;
+   margin: .5em 0em;
+   font-size: 1em;
+   border: 5px solid #333;
+   cursor: pointer;
+}
+
+/*::focus to get link 'sticky' highlighting behavior*/
+.dropdownbtn:hover {
+   background-color: #e6dacf;
+ }
+
+ .dropdown {
+   position: relative;
+ }
+
+ .dropdown-content {
+   display: none;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   
+ }
+
+ .dropdown-content a {
+   color: black;
+   text-decoration: none;
+   display: flex;
+ }
+
+ .dropdown-content a:hover {
+    background-color: #e6dacf
+   }
+
+ .show {
+    display:flex;
+   }
