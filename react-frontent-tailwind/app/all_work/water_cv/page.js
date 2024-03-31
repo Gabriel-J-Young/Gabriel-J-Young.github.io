@@ -11,33 +11,28 @@ export default function Page() {
           <h2>Winter 2019</h2>
         </div>
         <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>This Project was made for CSC 471 at Cal Poly in fall quarter 2021.<br/>
-          For my final project, I created two floating islands, and asteroid in blender, and put them together in a kinematics model to orbit each other. My initial idea was to model something like the three-body problem, with three bodies of roughly equal mass exerting orbital forces on each other. Due to time constraints, it proved impractical to find an initial stable configuration to model. Therefore, I decided to model a more traditional orbital system with one body having a dominant amount of mass. In this project that body is the largest island.<br/>
-          For this project I made sure to implement technically challenging features but making a visually appealing and cohesive scene was very important to me, hence the decision to create most of the models.</p>
+          <p>This project was made for the 'SLO hacks go' hackathon in November 2019. <br/>During this project, I worked with three other team members to create a program to help quantitatively analyze wastewater during the wastewater treatment process. Specifically, the goal of this program was to measure the “mixed liquor quality” with computer vison.
+          <br/>“Mixed liquor quality” refers to how much solid biomass still mixed in with the wastewater in an aeration tank. The wastewater plant we were dealing with used the “active sludge” method for filtering wastewater, which consists of an aeration tank, at which point air is injected into the wastewater, and a settling tank, where the water “settles” and the biomass physically separates from the wastewater, with only clear, treated water remaining.</p>
         </div>
-        <div className="relative">
+
+
+        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-2 rounded-lg bg-sazerac">
+          <p>Going to the treatment plant</p>
+        </div>
+        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
+          <p>At the start of the project, we drove over the SLO wastewater treatment plant to learn more about the wastewater treatment process from the workers at the plant, and to collect data in the form of videos of the water in the aeration tank.</p>
+          </div>
+          <div className="relative place-items-center">
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/summary.gif"
-            alt="overview gif"
+            src="/img/water_cv/wastewater_plant.jpg"
+            alt="collision gif"
             width="1920"
             height="1080"
             priority
           />
         </div>
-
-        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-2 rounded-lg bg-sazerac">
-          <p>I implemented:</p>
-        </div>
-        <div className="flex flex-row text-md max-w-prose p-4 rounded-lg bg-sazerac">
-          <ul class="list-disc">
-            <li>Collision detection</li>
-            <li>Orbital Kinematics model</li>
-            <li>Animated particle system</li>
-            <li>Blinn-Phong lighting</li>
-            <li>Texture mapping</li>
-          </ul>
-        </div>
+        <p className="max-w-prose text-sm" >An aeration tank at the SLO wastewater treatment plant.</p>
 
         <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
           <h2>Collision detection</h2>
@@ -48,7 +43,7 @@ export default function Page() {
         <div className="relative place-items-center">
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/collision.gif"
+            src="/img/water_cv/wastewater_plant.jpg"
             alt="collision gif"
             width="1920"
             height="1080"
