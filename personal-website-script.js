@@ -28,6 +28,8 @@ function toggleJapan100Mountains() {
     document.getElementById("Japan100Mountains").classList.toggle("show");
   }
 
+
+
   
   // Close the dropdown menu if the user clicks outside of it
   // window.onclick = function(event) {
