@@ -11,7 +11,7 @@ export default function Home() {
 
         <div className="relative flex place-items-center">
           <Image
-            className="w-full max-w-5xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
+            className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
             src="/img/portfolio_pic.png"
             alt="portfolio pic"
             width={1276}
