@@ -26,7 +26,7 @@ export default function Page() {
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
             src="/img/water_cv/wastewater_plant.jpg"
-            alt="collision gif"
+            alt="wastewater_plant"
             width="1920"
             height="1080"
             priority
@@ -35,108 +35,60 @@ export default function Page() {
         <p className="max-w-prose text-sm" >An aeration tank at the SLO wastewater treatment plant.</p>
 
         <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>Collision detection</h2>
+          <h2>Writing the Computer Vision Program</h2>
         </div>
         <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>Collisions are implemented as perfectly elastic, using vector math. A collision occurs when the distance between two bodies is less than or equal to the sum of their radii. When a collision occurs, the vector normal of collision is computed. Then the dot product of the difference in velocities and the vector normal of collision is computed to get the relative velocity of the bodies along the vector normal of collision. This relative velocity is subtracted and added to the velocities of the bodies, and then mass weighting is applied.</p>
-        </div>
+          <p>The computer vision program first converted the input video into the HSV color space, to improve image segmentation and make the system more robust against varying light levels. The program then used a simple threshold to segment the bubbles from the water and calculated the percent of the frame that was covered by water.  Then, the average color of the water was computed. I attempted to implement a way to calculate the size of the individual bubbles by matching the bubbles with textures through key points, but was not able to due to time constraints.
+            </p></div>
         <div className="relative place-items-center">
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/water_cv/wastewater_plant.jpg"
-            alt="collision gif"
+            src="/img/water_cv/wastewater_close.jpg"
+            alt="waste waster cv image"
             width="1920"
             height="1080"
             priority
           />
         </div>
-        <p className="max-w-prose text-sm" >After the collision, the asteroid follows a curved path because of gravitational force</p>
+        <p className="max-w-prose text-sm">An example frame of what the computer vision program would run on</p>
         
 
         <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>Orbital Kinematics model</h2>
+          <h2>Final Product</h2>
         </div>
         <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>Each body has a radius, mass, position, velocity, and acceleration. These, along with the gravitational constant, are initially set manually to create a stable system. When the model runs, the acceleration is computed according to Cowell’s method (for Orbit Modeling) and velocity and position are set accordingly. This was implemented such that all the bodies exert gravitational force on each other. In practice however, the motions of the bodies are mostly determined by the largest island as it had the largest mass by far.</p>
-          </div>
+          <p>We displayed our project as a combination of raw video of the wastewater, a visualization of the program’s segmentation, and a website to display the computed data.
+            </p></div>
         <div className="relative place-items-center">
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/cowells.svg"
-            alt="cowells formula"
+            src="/img/water_cv/final_product.PNG"
+            alt="Final product visualization"
             width="1920"
             height="1080"
             priority
           />
         </div>
-        <p>cowell's method</p>
+        <p className="max-w-prose text-sm" >Final product visualization</p>
 
         <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>Animated particle system</h2>
+          <h2>Team Members</h2>
         </div>
         <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>The snow falling from the cloud onto the large island is what constitutes the particle system. Particles are spawned randomly within a disk in the cloud itself and accelerate downward for a given time. The particle positions are also updated according to the position of the large island itself.</p>
-          </div>
+          <p>I worked on this project with Jasmine D, Linnea Holmen, and John Yee.<br/>
+          I worked with OpenCV in C++ to process video and get relevant quantitative information from video footage of wastewater in a tank where it is treated. Jasmine D was the industry expert that helped identify the problem and provided access to the information we used in our demo. Linnea Holmen worked on the ideation process, the final presentation, and finding ways to simply explain the complicated process of wastewater treatment. John Yee created the web page which read the data and displayed it in an easy-to-read table.
+            </p></div>
         <div className="relative place-items-center">
           <Image
             className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/snow.gif"
-            alt="snow gif"
+            src="/img/water_cv/team_pic.jpg"
+            alt="team pic"
             width="1920"
             height="1080"
             priority
           />
         </div>
-        <p className="max-w-prose text-sm" >The particles may be a bit hard to see, but if you enlarge the image, you should be able to see the particles accelerating</p>
-
-
-        <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>Blinn-Phong lighting</h2>
-        </div>
-        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>I implemented Blinn-Phong lighting for this project with ambient, diffuse, and specular components. There is a light source attached to the large island and a second light source attached to the smaller island.</p>
-          </div>
-        <div className="relative place-items-center">
-          <Image
-            className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/light.gif"
-            alt="lighting gif"
-            width="1920"
-            height="1080"
-            priority
-          />
-        </div>
-        <p className="max-w-prose text-sm" >Light reflected on the cloud by the light source from the little island</p>
-
-        <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>Texture mapping</h2>
-        </div>
-        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>I also implemented texture mapping on the trees, lantern, and tank. As a note, the tank turret is animated to rotate side to side and the lantern’s animated to become brighter and dimmer.</p>
-          </div>
-        <div className="relative place-items-center">
-          <Image
-            className="w-full max-w-3xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg"
-            src="/img/orbiting_islands/texture.gif"
-            alt="texture gif"
-            width="1920"
-            height="1080"
-            priority
-          />
-        </div>
-        <p className="max-w-prose text-sm" >Can you spot the tank? It's very well camouflaged</p>
-
-        <div className="flex text-2xl justify-center m-4 p-2 rounded-lg bg-sazerac">
-          <h2>References</h2>
-        </div>
-        <div className="flex flex-row text-md justify-center max-w-prose m-2 p-4 rounded-lg bg-sazerac">
-          <p>
-              Collisions: <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://physics.stackexchange.com/questions/79047/determine-resultant-velocity-of-an-elastic-particle-particle-collision-in-3d-spa">vector-based collisions</a><br/>
-              Orbits: <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://en.wikipedia.org/wiki/Orbit_modeling#Cowell's_method">Cowell's method</a><br/>
-              Blender Stuff: <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://www.youtube.com/watch?v=y7PdiGXbrD0">Low Poly Tree</a>    
-                            <a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://www.youtube.com/watch?v=0lj643VmTsg">Low Poly Island</a>
-          </p>
-          </div>
+        <p className="max-w-prose text-sm" > Team members, Nov 2019</p>
 
       </main>
       </div>
