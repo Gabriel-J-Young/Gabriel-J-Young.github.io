@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div class='bg-hero-pattern bg-cover bg-center'>
+    <div className='bg-hero-pattern bg-cover bg-center'>
     <main className="flex min-h-screen flex-col items-center p-2 ">
         <div className="flex grow mb-4 text-4xl justify-center p-4 text-white">
           <h2>Gabriel J Young</h2>
@@ -139,6 +140,12 @@ export default function Home() {
             </p>
           </a>
         </div>
+
+        <Link className="flex items-center rounded-md bg-gray-50 p-3 text-md"
+          key ="login"
+          href="/login">
+          <p>login</p>
+        </Link>
     </main>
     </div>
   );
