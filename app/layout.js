@@ -15,12 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <div className={casFont.className}>
+      <body className={casFont.className}>
         <div className='bg-[#b99672]'>
           <TopNav />
         </div>
           { children }
-      </div>
+      </body>
     </html>
   );
 }
