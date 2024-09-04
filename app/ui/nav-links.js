@@ -7,6 +7,7 @@ import clsx from 'clsx';
 const links = [
     {name: 'Git Hub', href: 'https://github.com/Gabriel-J-Young'},
     {name: 'Contact', href: '/contact'},
+    {name: 'Reading List', href: '/reading_list'},
     {name: 'Hiking', href: '/hiking'},
     {name: 'All Work', href: '/all_work'},
 ];
