@@ -15,7 +15,7 @@ export default function Page() {
           <p>WIP!<br/>
           I plan to log some hikes and import some strava data here</p></div>
 
-          <GetUsers></GetUsers>
+          {/* <GetUsers></GetUsers> */}
 
       </main>
       </div>
