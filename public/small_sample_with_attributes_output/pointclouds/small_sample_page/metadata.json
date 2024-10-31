@@ -1,0 +1,156 @@
+{
+	"version": "2.0",
+	"name": "small_sample",
+	"description": "",
+	"points": 1854443,
+	"projection": "",
+	"hierarchy": {
+		"firstChunkSize": 10318, 
+		"stepSize": 4, 
+		"depth": 5
+	},
+	"offset": [713335.375, 3910546, 127.51300000000001],
+	"scale": [0.001, 0.001, 0.001],
+	"spacing": 0.6083984375,
+	"boundingBox": {
+		"min": [713335.375, 3910546, 127.51300000000001], 
+		"max": [713413.25, 3910623.875, 205.38800000000001]
+	},
+	"encoding": "DEFAULT",
+	"attributes": [
+		{
+			"name": "position",
+			"description": "",
+			"size": 12,
+			"numElements": 3,
+			"elementSize": 4,
+			"type": "int32",
+			"min": [713335.375, 3910546, 127.51300000000001],
+			"max": [713413.25, 3910599.5, 146.50900000000001],
+			"scale": [1, 1, 1],
+			"offset": [0, 0, 0]
+		},{
+			"name": "intensity",
+			"description": "",
+			"size": 2,
+			"numElements": 1,
+			"elementSize": 2,
+			"type": "uint16",
+			"min": [1196],
+			"max": [49384],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "return number",
+			"description": "",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "uint8",
+			"min": [1],
+			"max": [5],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "number of returns",
+			"description": "",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "uint8",
+			"min": [1],
+			"max": [5],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "classification",
+			"description": "",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "uint8",
+			"histogram": [0, 1854443, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+			"min": [1],
+			"max": [1],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "scan angle rank",
+			"description": "",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "uint8",
+			"min": [0],
+			"max": [0],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "user data",
+			"description": "",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "uint8",
+			"min": [0],
+			"max": [0],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "point source id",
+			"description": "",
+			"size": 2,
+			"numElements": 1,
+			"elementSize": 2,
+			"type": "uint16",
+			"min": [1007],
+			"max": [2007],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "Scan Angle",
+			"description": "",
+			"size": 4,
+			"numElements": 1,
+			"elementSize": 4,
+			"type": "float",
+			"min": [-60.444000244140625],
+			"max": [62.243999481201172],
+			"scale": [1],
+			"offset": [0]
+		},{
+			"name": "normal x",
+			"description": "X surface normal",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "int8",
+			"min": [-100],
+			"max": [100],
+			"scale": [0.01],
+			"offset": [0]
+		},{
+			"name": "normal y",
+			"description": "Y surface normal",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "int8",
+			"min": [-100],
+			"max": [100],
+			"scale": [0.01],
+			"offset": [0]
+		},{
+			"name": "normal z",
+			"description": "Z surface normal",
+			"size": 1,
+			"numElements": 1,
+			"elementSize": 1,
+			"type": "int8",
+			"min": [-96],
+			"max": [100],
+			"scale": [0.01],
+			"offset": [0]
+		}
+	]
+}
