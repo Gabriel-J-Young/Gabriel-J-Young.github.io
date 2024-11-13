@@ -38,6 +38,8 @@ export default function Page() {
             <li><i>The Economist</i><br></br><a className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" 
             href="https://www.economist.com/interactive/united-states/2024/07/30/the-demise-of-an-iconic-american-highway">
                Big Sur</a><br></br> Photos of one of the most beautiful places in the world.</li>
+
+               <li><i>The Atlantic</i><br></br><br></br> I like Arthur C. Brooks.</li>
                <br></br>
                
             </ul></div>
