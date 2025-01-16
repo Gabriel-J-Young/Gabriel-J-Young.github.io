@@ -79,20 +79,20 @@ export default function Page() {
             </p>
           </a>
           <a
-            href="https://gabrieljyoung.com"
+            href="/all_work/JPNS"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors 
             border-neutral-700 bg-neutral-800/30 hover:bg-neutral-900/40 hover:border-neutral-800 m-2"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className={`mb-3 text-2xl font-semibold`}>
-              WIP{" "}
+              JPNS{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
               </span>
             </h2>
             <p className={`m-0 max-w-[30ch] text-sm opacity-95`}>
-              WIP
+              JPNS
             </p>
           </a>
           <a
